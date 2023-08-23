@@ -14,145 +14,105 @@
 		</view>
 
 		<swiper class="swiper" circular indicator-dots="true" autoplay="true" :interval="2000" :duration="500">
-			<swiper-item style="border-radius: 10px;" v-for=" item in swiper_list">
-				<image style="border-radius: 10px;" :src="item"></image>
+			<swiper-item style="border-radius: 10px;" v-for=" item in swiper_list" :key="item.id">
+				<image style="border-radius: 10px;" :src="item.image_src"></image>
 			</swiper-item>
 		</swiper>
-		
+
 		<view class="grid" style="margin-top: 15px;">
 			<u-grid :border="false" col="5">
-				<u-grid-item v-for="(listItem,listIndex) in list" :key="listIndex">
+				<u-grid-item v-for="(listItem,listIndex) in catitems" :key="listItem.id">
 					<img style="width: 30px;height: 30px;" :customStyle="{paddingTop:20+'rpx'}"
-						src="http://localhost:4000/public/images/sucai590.png" />
-					<text class="grid-text">{{listItem.title}}</text>
+						:src="listItem.image_src" />
+					<text class="grid-text">{{listItem.name}}</text>
 				</u-grid-item>
 			</u-grid>
 		</view>
 
 		<view class="show_img">
-			<view class="bg_img" style="background-color: aqua;width: 48.5%;border-radius: 10px;">
-				<img src="" alt="">
+			<view class="bg_img" style="width: 48.5%;border-radius: 10px;">
+				<view class="title" style="">
+					{{floorsdata[0].floor_title}}
+				</view>
+				<swiper class="" style="width: 100%;height: 100%;" circular indicator-dots="true" autoplay="true"
+					:interval="2500" :duration="800">
+					<swiper-item style="border-radius: 10px;" v-for=" (item,index) in floorsdata[0].floor_imgs"
+						:key="index">
+						<img :src="item" alt="" style="width: 100%;height: 100%;">
+					</swiper-item>
+				</swiper>
 			</view>
 			<view class="img_siz" style="width: 48.5%;border-radius: 10px;display: flex;flex-wrap: wrap;">
-				<view class="img s1" style="background-color: chartreuse;width: 100%;height: 49%;border-radius: 10px;">
-
+				<view class="img s1" style="width: 100%;height: 49%;border-radius: 10px;">
+					<view class="title" style="">
+						{{floorsdata[1].floor_title}}
+					</view>
+					<img :src="floorsdata[1].floor_imgs[0]" alt="" style="width: 100%;height: 100%;">
 				</view>
-				<view class="img s2"
-					style="background-color: blue;width: 100%;height: 49%;border-radius: 10px;margin-bottom: -5px;">
-
+				<view class="img s2" style="width: 100%;height: 49%;border-radius: 10px;margin-bottom: -5px;">
+					<view class="title" style="">
+						{{floorsdata[2].floor_title}}
+					</view>
+					<img :src="floorsdata[2].floor_imgs[0]" alt="" style="width: 100%;height: 100%;">
 				</view>
 			</view>
 		</view>
 
 		<view class="container">
-			<view class="item">
-				<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
+			<view class="item" v-for="(item,index) in recommend" :key="item._id">
+				<image :src="item.coverpic" style="border-radius: 10px;"></image>
 				<view class="title" style="width: 100%;">
-					<h3>大白兔奶茶</h3>
+					<h3>{{item.name}}</h3>
 				</view>
-
 				<view class="watch" style="display: flex;align-items: center;">
-					<text style="font-size: 14px;color: #999;">66.3万</text>
-					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;">
+					<text style="font-size: 14px;color: #999;">{{item.pageview}}</text>
+					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;padding: 0 5px;">
 					</image>
 				</view>
 				<view class="collection" style="display: flex;align-items: center;">
-					<text style="font-size: 14px;color: #999;">2495</text>
-					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
-					</image>
-				</view>
-			</view>
-			<view class="item">
-				<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
-				<view class="title" style="width: 100%;">
-					<h3>大白兔奶茶</h3>
-				</view>
-
-				<view class="watch" style="display: flex;align-items: center;">
-					<text style="font-size: 14px;color: #999;">66.3万</text>
-					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;">
-					</image>
-				</view>
-				<view class="collection" style="display: flex;align-items: center;">
-					<text style="font-size: 14px;color: #999;">2495</text>
-					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
-					</image>
-				</view>
-			</view>
-			<view class="item">
-				<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
-				<view class="title" style="width: 100%;">
-					<h3>大白兔奶茶</h3>
-				</view>
-
-				<view class="watch" style="display: flex;align-items: center;">
-					<text style="font-size: 14px;color: #999;">66.3万</text>
-					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;">
-					</image>
-				</view>
-				<view class="collection" style="display: flex;align-items: center;">
-					<text style="font-size: 14px;color: #999;">2495</text>
-					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
+					<text style="font-size: 14px;color: #999;">{{item.collections}}</text>
+					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;padding: 0 5px;">
 					</image>
 				</view>
 			</view>
 		</view>
+		
 	</view>
 </template>
 
 <script>
+	import common from "@/utils/common.js"
 	export default {
 		data() {
 			return {
-				swiper_list: [
-					'https://cdn.uviewui.com/uview/swiper/swiper1.png',
-					'https://cdn.uviewui.com/uview/swiper/swiper2.png',
-					'https://cdn.uviewui.com/uview/swiper/swiper3.png',
-				],
-				list: [{
-						name: 'photo',
-						title: '家常菜'
-					},
-					{
-						name: 'lock',
-						title: '甜点'
-					},
-					{
-						name: 'star',
-						title: '素菜'
-					},
-					{
-						name: 'hourglass',
-						title: '凉菜'
-					},
-					{
-						name: 'home',
-						title: '下饭菜'
-					},
-					{
-						name: 'star',
-						title: '川菜'
-					}, {
-						name: 'star',
-						title: '川菜'
-					}, {
-						name: 'star',
-						title: '川菜'
-					}, {
-						name: 'star',
-						title: '川菜'
-					}, {
-						name: 'star',
-						title: '分类'
-					},
-				],
+				swiper_list: [],
+				catitems: [],
+				floorsdata: [],
+				recommend: []
 			}
 		},
 		onLoad() {
-
+			this.init()
 		},
 		methods: {
-			
+			init() {
+				common.getAllMtSwiper({}).then((res) => {
+						this.swiper_list = res.data.message
+						// console.log(res)
+					}),
+					common.getAllCatitems({}).then((res) => {
+						// console.log(res)
+						this.catitems = res.data.message
+					}),
+					common.getAllFloorsdata({}).then((res) => {
+						this.floorsdata = res.data.message
+						// console.log(this.floorsdata)
+					}),
+					common.getAllRecommend({}).then((res) => {
+						console.log(res)
+						this.recommend = res.data.message
+					})
+			}
 		}
 	}
 </script>
@@ -182,6 +142,7 @@
 				font-size: 13px;
 				padding-top: 7pt;
 				padding-left: 15pt;
+
 			}
 
 			.search {
@@ -197,6 +158,7 @@
 			width: 90%;
 			margin: 0 auto;
 			margin-top: 150px;
+
 			image {
 				width: 100%;
 				display: block;
@@ -219,7 +181,23 @@
 			display: flex;
 			justify-content: space-between;
 			border-radius: 10px;
+
+			img {
+				border-radius: 7px;
+			}
+
 			// background-color: #909399;
+			.title {
+				position: absolute;
+				padding: 7px;
+				background-color: #df9040;
+				border-radius: 7px;
+				margin-top: 7px;
+				margin-left: 5px;
+				opacity: 0.7;
+				color: #fff;
+				z-index: 9;
+			}
 		}
 
 		.container {
@@ -229,6 +207,7 @@
 			justify-content: space-between;
 			flex-wrap: wrap;
 			border-radius: 10px;
+			margin-top: 10px;
 
 			// margin-top: 10px;
 			// background-color: #909399;
