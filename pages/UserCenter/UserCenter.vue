@@ -1,20 +1,22 @@
 <template>
 	<view class="content">
-		<view class="user_head">
-			<view class="head_img">
-				<image src="../../static/wode_1_slices/zu428@2x.png" mode=""></image>
+		<view class="" style="background-color: #fff;width: 100%;">
+			<view class="user_head">
+				<view class="head_img">
+					<image src="../../static/wode_1_slices/zu428@2x.png" mode=""></image>
+				</view>
+				<view class="user_name">
+					<text>立即登录</text> <br>
+					<text style="color: darkgray;">登陆后可收藏喜欢的菜谱</text>
+				</view>
 			</view>
-			<view class="user_name">
-				<text>立即登录</text> <br>
-				<text style="color: darkgray;">登陆后可收藏喜欢的菜谱</text>
+			
+			<view class="to_vip">
+				<span
+					style="font-size: 13px;padding-left: 50px;padding-top: 10px;font-weight: bolder;color: #d4b583;">升级为VIP</span>
+				<span
+					style="font-size: 16px;padding-right: 30px;padding-top: 10px;font-weight: bolde;color: #d4b583;">〉</span>
 			</view>
-		</view>
-
-		<view class="to_vip">
-			<span
-				style="font-size: 13px;padding-left: 50px;padding-top: 10px;font-weight: bolder;color: #d4b583;">升级为VIP</span>
-			<span
-				style="font-size: 16px;padding-right: 30px;padding-top: 10px;font-weight: bolde;color: #d4b583;">〉</span>
 		</view>
 
 		<view class="my_pr">
@@ -49,7 +51,7 @@
 			<view class="show_more" :class="[isShow ? 'show-more-click' : '']">
 
 				<view class="list_items">
-					<view class="item" v-for="(item,index) in foods"  v-if="isShowText || index < max">
+					<view class="item" v-for="(item,index) in foods" v-if="isShowText || index < max">
 						<span>{{item}}</span>
 						<span style="padding-right: 100px;">500g</span>
 					</view>
@@ -58,11 +60,40 @@
 			</view>
 
 			<view @click="showMore">
-				<view class="" style="text-align: center;padding-top: 10px;font-size: 13px;color: chocolate;">
+				<view class="" style="text-align: center;padding-top: 10px;font-size: 13px;color: chocolate;padding-bottom: 10px;">
 					{{isShow ? '🔻收起':'🔺展开全部'}}
 				</view>
 
 			</view>
+
+		</view>
+
+		<view class="recommend">
+			<h1 class="title" style="background-color: #fff;padding-left: 10px;padding-top: 5px;">
+				我的菜谱
+			</h1>
+			<scroll-view scroll-x="true" class="_abbr">
+
+				<view class="item">
+					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<view class="title" style="width: 100%;">
+						<h3 style="">大白兔奶茶</h3>
+					</view>
+				</view>
+				<view class="item">
+					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<view class="title" style="width: 100%;">
+						<h3 style="">大白兔奶茶</h3>
+					</view>
+				</view>
+				<view class="item">
+					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<view class="title" style="width: 100%;">
+						<h3 style="">大白兔奶茶</h3>
+					</view>
+				</view>
+
+			</scroll-view>
 		</view>
 	</view>
 </template>
@@ -118,14 +149,17 @@
 
 <style lang="scss">
 	.content {
+		background-color: #e8e8e8;
 		.user_head {
 			width: 90%;
 			margin: 0 auto;
 			margin-top: 10px;
 			display: flex;
 			align-items: flex-end;
+			
 
 			.head_img {
+				background-color: #fff;
 				image {
 					width: 80px;
 					height: 80px;
@@ -186,7 +220,7 @@
 
 		.foodbooks {
 			width: 100%;
-
+			background-color: #fff;
 			.show_more {
 				width: 100%;
 				// height: 2px;
@@ -216,6 +250,39 @@
 					margin: 0 auto;
 					border-top: 1px solid #bdbdbd;
 					padding: 10px 0;
+				}
+			}
+		}
+
+		.recommend {
+			width: 100%;
+			margin: 0 auto;
+			margin-top: 15px;
+			// margin-left: 10px;
+			// background-color: #e8e8e8;
+			// padding-top: 15px;
+			._abbr {
+				width: 100%;
+				// display: flex;
+				white-space: nowrap;
+				background-color: #fff;
+
+				.item {
+					// background-color: aqua;
+					width: 40%;
+					height: 110pt;
+					border-radius: 10px;
+					margin-top: 10px;
+					// display: flex;
+					// flex-wrap: wrap;
+					padding-right: 0px;
+					display: inline-block;
+					text-align: center;
+
+					image {
+						width: 85%;
+						height: 95%;
+					}
 				}
 			}
 		}

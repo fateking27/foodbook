@@ -24,12 +24,18 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.content {
+  background-color: #e8e8e8;
+}
 .content .user_head {
   width: 90%;
   margin: 0 auto;
   margin-top: 10px;
   display: flex;
   align-items: flex-end;
+}
+.content .user_head .head_img {
+  background-color: #fff;
 }
 .content .user_head .head_img image {
   width: 80px;
@@ -78,6 +84,7 @@
 }
 .content .foodbooks {
   width: 100%;
+  background-color: #fff;
 }
 .content .foodbooks .show_more {
   width: 100%;
@@ -97,5 +104,28 @@
   margin: 0 auto;
   border-top: 1px solid #bdbdbd;
   padding: 10px 0;
+}
+.content .recommend {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.content .recommend ._abbr {
+  width: 100%;
+  white-space: nowrap;
+  background-color: #fff;
+}
+.content .recommend ._abbr .item {
+  width: 40%;
+  height: 110pt;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-right: 0px;
+  display: inline-block;
+  text-align: center;
+}
+.content .recommend ._abbr .item image {
+  width: 85%;
+  height: 95%;
 }
 
