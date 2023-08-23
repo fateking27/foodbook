@@ -100,9 +100,6 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
-    uSearch: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-search/u-search */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-search/u-search")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-search/u-search.vue */ 192))
-    },
     uGrid: function () {
       return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid/u-grid */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid/u-grid")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid/u-grid.vue */ 200))
     },
@@ -182,7 +179,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
@@ -190,6 +187,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _common = _interopRequireDefault(__webpack_require__(/*! @/utils/common.js */ 165));
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -300,10 +304,16 @@ var _default = {
         console.log(res);
         _this.recommend = res.data.message;
       });
+    },
+    goto: function goto() {
+      uni.navigateTo({
+        url: "/pages/searchPage/searchPage"
+      });
     }
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

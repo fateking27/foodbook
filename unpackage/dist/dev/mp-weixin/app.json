@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/VIP/VIP",
-    "pages/UserCenter/UserCenter"
+    "pages/UserCenter/UserCenter",
+    "pages/searchPage/searchPage"
   ],
   "subPackages": [],
   "window": {

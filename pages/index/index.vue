@@ -8,8 +8,13 @@
 				小白学做菜必备烹饪助手
 			</view>
 			<view class="search">
-				<u-search inputAlign="center" placeholder="搜你想搜的~" :showAction="false" shape="round" height="35"
-					bgColor="#fff"></u-search>
+				<!-- <u-search inputAlign="center" placeholder="搜你想搜的~" :showAction="false" shape="round" height="35"
+						bgColor="#fff"></u-search> -->
+					<button type="default" @click="goto"
+						style="background-color: #fff;width: 100%;border-radius: 25px;font-size: 16px;color: #999;">
+						<icon type="search" color="#df9040" size="15px"></icon>
+						<span style="padding-left: 7px;">搜你想搜的~</span>
+					</button>
 			</view>
 		</view>
 
@@ -66,17 +71,19 @@
 				</view>
 				<view class="watch" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">{{item.pageview}}</text>
-					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;padding: 0 5px;">
+					<image src="http://localhost:4000/public/images/liulam @2x.png"
+						style="width: 20px;height: 15px;padding: 0 5px;">
 					</image>
 				</view>
 				<view class="collection" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">{{item.collections}}</text>
-					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;padding: 0 5px;">
+					<image src="http://localhost:4000/public/images/soucang@2x.png"
+						style="width: 20px;height: 20px;padding: 0 5px;">
 					</image>
 				</view>
 			</view>
 		</view>
-		
+
 	</view>
 </template>
 
@@ -112,6 +119,11 @@
 						console.log(res)
 						this.recommend = res.data.message
 					})
+			},
+			goto(){
+				uni.navigateTo({
+					url: "/pages/searchPage/searchPage"
+				})
 			}
 		}
 	}
