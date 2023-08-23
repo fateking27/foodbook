@@ -23,7 +23,7 @@
 			<u-grid :border="false" col="5">
 				<u-grid-item v-for="(listItem,listIndex) in list" :key="listIndex">
 					<img style="width: 30px;height: 30px;" :customStyle="{paddingTop:20+'rpx'}"
-						src="@/static/icon/sucai590.png" />
+						src="http://localhost:4000/public/images/sucai590.png" />
 					<text class="grid-text">{{listItem.title}}</text>
 				</u-grid-item>
 			</u-grid>
@@ -46,53 +46,53 @@
 
 		<view class="container">
 			<view class="item">
-				<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+				<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 				<view class="title" style="width: 100%;">
 					<h3>大白兔奶茶</h3>
 				</view>
 
 				<view class="watch" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">66.3万</text>
-					<image src="../../static/midouyichu _slices/liulam @2x.png" style="width: 20px;height: 15px;">
+					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;">
 					</image>
 				</view>
 				<view class="collection" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">2495</text>
-					<image src="../../static/midouyichu _slices/soucang@2x.png" style="width: 20px;height: 20px;">
+					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
 					</image>
 				</view>
 			</view>
 			<view class="item">
-				<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+				<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 				<view class="title" style="width: 100%;">
 					<h3>大白兔奶茶</h3>
 				</view>
 
 				<view class="watch" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">66.3万</text>
-					<image src="../../static/midouyichu _slices/liulam @2x.png" style="width: 20px;height: 15px;">
+					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;">
 					</image>
 				</view>
 				<view class="collection" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">2495</text>
-					<image src="../../static/midouyichu _slices/soucang@2x.png" style="width: 20px;height: 20px;">
+					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
 					</image>
 				</view>
 			</view>
 			<view class="item">
-				<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+				<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 				<view class="title" style="width: 100%;">
 					<h3>大白兔奶茶</h3>
 				</view>
 
 				<view class="watch" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">66.3万</text>
-					<image src="../../static/midouyichu _slices/liulam @2x.png" style="width: 20px;height: 15px;">
+					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;">
 					</image>
 				</view>
 				<view class="collection" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">2495</text>
-					<image src="../../static/midouyichu _slices/soucang@2x.png" style="width: 20px;height: 20px;">
+					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
 					</image>
 				</view>
 			</view>
@@ -152,7 +152,7 @@
 
 		},
 		methods: {
-
+			
 		}
 	}
 </script>
@@ -163,7 +163,7 @@
 			width: 100%;
 			height: 110pt;
 			color: #fff;
-			background-image: url("/static/midouyichu _slices/ditu@2x.png");
+			background-image: url("http://localhost:4000/public/images/ditu@2x.png");
 			background-color: #fff;
 			background-repeat: no-repeat;
 			background-size: 100% 80%;

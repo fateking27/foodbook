@@ -17,7 +17,7 @@
 		<view class="vip_card">
 			<view class="content" style="height: 70%;width: 100%;">
 				<view class="img_">
-					<image style="width: 75px;height: 75px;" src="../../static/wode_1_slices/zu428@2x.png" mode="">
+					<image style="width: 75px;height: 75px;" src="http://localhost:4000/public/images/zu428@2x.png" mode="">
 					</image>
 				</view>
 				<view class="being_vip">
@@ -34,21 +34,21 @@
 
 			<view class="foot" style="">
 				<view class="serve_" style="">
-					<image style="width: 30px;height: 30px;" src="../../static/caipusousuo_slices/mengbanzu282@3x.png"
+					<image style="width: 30px;height: 30px;" src="http://localhost:4000/public/images/mengbanzu282@3x.png"
 						mode=""></image>
 					<view class="" style="color: aliceblue;font-size: 12px;text-align: center;">
 						名厨课程
 					</view>
 				</view>
 				<view class="serve_" style="">
-					<image style="width: 30px;height: 30px;" src="../../static/caipusousuo_slices/mengbanzu282@3x.png"
+					<image style="width: 30px;height: 30px;" src="http://localhost:4000/public/images/mengbanzu282@3x.png"
 						mode=""></image>
 					<view class="" style="color: aliceblue;font-size: 12px;text-align: center;">
 						无广告打扰
 					</view>
 				</view>
 				<view class="serve_" style="">
-					<image style="width: 30px;height: 30px;" src="../../static/caipusousuo_slices/mengbanzu282@3x.png"
+					<image style="width: 30px;height: 30px;" src="http://localhost:4000/public/images/mengbanzu282@3x.png"
 						mode=""></image>
 					<view class="" style="color: aliceblue;font-size: 12px;text-align: center;">
 						身份标识
@@ -63,7 +63,7 @@
 			</h1>
 			<scroll-view scroll-x="true" class="_abbr">
 				<view class="item">
-					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 					<view class="title" style="width: 100%;">
 						<h3 style="">大白兔奶茶</h3>
 					</view>
@@ -71,13 +71,13 @@
 					<view class="" style="display: flex;margin-top: 7px;">
 						<view class="watch" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">66.3万</text>
-							<image src="../../static/midouyichu _slices/liulam @2x.png"
+							<image src="http://localhost:4000/public/images/liulam @2x.png"
 								style="width: 20px;height: 15px;">
 							</image>
 						</view>
 						<view class="collection" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">2495</text>
-							<image src="../../static/midouyichu _slices/soucang@2x.png"
+							<image src="http://localhost:4000/public/images/soucang@2x.png"
 								style="width: 20px;height: 20px;">
 							</image>
 						</view>
@@ -85,7 +85,7 @@
 
 				</view>
 				<view class="item">
-					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 					<view class="title" style="width: 100%;">
 						<h3 style="">大白兔奶茶</h3>
 					</view>
@@ -93,13 +93,13 @@
 					<view class="" style="display: flex;margin-top: 7px;">
 						<view class="watch" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">66.3万</text>
-							<image src="../../static/midouyichu _slices/liulam @2x.png"
+							<image src="http://localhost:4000/public/images/liulam @2x.png"
 								style="width: 20px;height: 15px;">
 							</image>
 						</view>
 						<view class="collection" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">2495</text>
-							<image src="../../static/midouyichu _slices/soucang@2x.png"
+							<image src="http://localhost:4000/public/images/soucang@2x.png"
 								style="width: 20px;height: 20px;">
 							</image>
 						</view>
@@ -107,7 +107,7 @@
 
 				</view>
 				<view class="item">
-					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 					<view class="title" style="width: 100%;">
 						<h3 style="">大白兔奶茶</h3>
 					</view>
@@ -115,13 +115,13 @@
 					<view class="" style="display: flex;margin-top: 7px;">
 						<view class="watch" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">66.3万</text>
-							<image src="../../static/midouyichu _slices/liulam @2x.png"
+							<image src="http://localhost:4000/public/images/liulam @2x.png"
 								style="width: 20px;height: 15px;">
 							</image>
 						</view>
 						<view class="collection" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">2495</text>
-							<image src="../../static/midouyichu _slices/soucang@2x.png"
+							<image src="http://localhost:4000/public/images/soucang@2x.png"
 								style="width: 20px;height: 20px;">
 							</image>
 						</view>
@@ -138,7 +138,7 @@
 			</h1>
 			<scroll-view scroll-x="true" class="_abbr">
 				<view class="item">
-					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 					<view class="title" style="width: 100%;">
 						<h3 style="">大白兔奶茶</h3>
 					</view>
@@ -146,13 +146,13 @@
 					<view class="" style="display: flex;margin-top: 7px;">
 						<view class="watch" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">66.3万</text>
-							<image src="../../static/midouyichu _slices/liulam @2x.png"
+							<image src="http://localhost:4000/public/images/liulam @2x.png"
 								style="width: 20px;height: 15px;">
 							</image>
 						</view>
 						<view class="collection" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">2495</text>
-							<image src="../../static/midouyichu _slices/soucang@2x.png"
+							<image src="http://localhost:4000/public/images/soucang@2x.png"
 								style="width: 20px;height: 20px;">
 							</image>
 						</view>
@@ -160,7 +160,7 @@
 
 				</view>
 				<view class="item">
-					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 					<view class="title" style="width: 100%;">
 						<h3 style="">大白兔奶茶</h3>
 					</view>
@@ -168,13 +168,13 @@
 					<view class="" style="display: flex;margin-top: 7px;">
 						<view class="watch" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">66.3万</text>
-							<image src="../../static/midouyichu _slices/liulam @2x.png"
+							<image src="http://localhost:4000/public/images/liulam @2x.png"
 								style="width: 20px;height: 15px;">
 							</image>
 						</view>
 						<view class="collection" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">2495</text>
-							<image src="../../static/midouyichu _slices/soucang@2x.png"
+							<image src="http://localhost:4000/public/images/soucang@2x.png"
 								style="width: 20px;height: 20px;">
 							</image>
 						</view>
@@ -182,7 +182,7 @@
 
 				</view>
 				<view class="item">
-					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 					<view class="title" style="width: 100%;">
 						<h3 style="">大白兔奶茶</h3>
 					</view>
@@ -190,13 +190,13 @@
 					<view class="" style="display: flex;margin-top: 7px;">
 						<view class="watch" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">66.3万</text>
-							<image src="../../static/midouyichu _slices/liulam @2x.png"
+							<image src="http://localhost:4000/public/images/liulam @2x.png"
 								style="width: 20px;height: 15px;">
 							</image>
 						</view>
 						<view class="collection" style="display: flex;">
 							<text style="font-size: 14px;color: #999;">2495</text>
-							<image src="../../static/midouyichu _slices/soucang@2x.png"
+							<image src="http://localhost:4000/public/images/soucang@2x.png"
 								style="width: 20px;height: 20px;">
 							</image>
 						</view>
@@ -212,53 +212,53 @@
 		</h1>
 		<view class="container">
 			<view class="item">
-				<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+				<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 				<view class="title" style="width: 100%;">
 					<h3>大白兔奶茶</h3>
 				</view>
 
 				<view class="watch" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">66.3万</text>
-					<image src="../../static/midouyichu _slices/liulam @2x.png" style="width: 20px;height: 15px;">
+					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;">
 					</image>
 				</view>
 				<view class="collection" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">2495</text>
-					<image src="../../static/midouyichu _slices/soucang@2x.png" style="width: 20px;height: 20px;">
+					<image src=".http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
 					</image>
 				</view>
 			</view>
 			<view class="item">
-				<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+				<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 				<view class="title" style="width: 100%;">
 					<h3>大白兔奶茶</h3>
 				</view>
 
 				<view class="watch" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">66.3万</text>
-					<image src="../../static/midouyichu _slices/liulam @2x.png" style="width: 20px;height: 15px;">
+					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;">
 					</image>
 				</view>
 				<view class="collection" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">2495</text>
-					<image src="../../static/midouyichu _slices/soucang@2x.png" style="width: 20px;height: 20px;">
+					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
 					</image>
 				</view>
 			</view>
 			<view class="item">
-				<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+				<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 				<view class="title" style="width: 100%;">
 					<h3>大白兔奶茶</h3>
 				</view>
 
 				<view class="watch" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">66.3万</text>
-					<image src="../../static/midouyichu _slices/liulam @2x.png" style="width: 20px;height: 15px;">
+					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;">
 					</image>
 				</view>
 				<view class="collection" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">2495</text>
-					<image src="../../static/midouyichu _slices/soucang@2x.png" style="width: 20px;height: 20px;">
+					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
 					</image>
 				</view>
 			</view>
@@ -282,7 +282,7 @@
 			width: 100%;
 			height: 100pt;
 			color: #fff;
-			background-image: url("/static/midouyichu _slices/ditu@2x.png");
+			background-image: url("http://localhost:4000/public/images/ditu@2x.png");
 			display: flex;
 			flex-wrap: wrap;
 

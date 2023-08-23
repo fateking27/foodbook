@@ -3,7 +3,7 @@
 		<view class="" style="background-color: #fff;width: 100%;">
 			<view class="user_head">
 				<view class="head_img">
-					<image src="../../static/wode_1_slices/zu428@2x.png" mode=""></image>
+					<image src="http://localhost:4000/public/images/zu428@2x.png" mode=""></image>
 				</view>
 				<view class="user_name">
 					<text>立即登录</text> <br>
@@ -22,19 +22,19 @@
 		<view class="my_pr">
 			<view class="pr_">
 				<view class="pr">
-					<image src="../../static/midouyichu _slices/soucang@2x.png" mode=""></image>
+					<image src="http://localhost:4000/public/images/soucang@2x.png" mode=""></image>
 					<view class="">
 						我的收藏
 					</view>
 				</view>
 				<view class="pr">
-					<image src="@/static/wode_1_slices/mengbanzu 281@2x.png" mode=""></image>
+					<image src="http://localhost:4000/public/images/mengbanzu 281@2x.png" mode=""></image>
 					<view class="">
 						浏览记录
 					</view>
 				</view>
 				<view class="pr">
-					<image src="@/static/wode_1_slices/mengbanzu282@2x.png" mode=""></image>
+					<image src="http://localhost:4000/public/images/mengbanzu282@2x.png" mode=""></image>
 					<view style="padding: 0 10px;" class="">
 						点赞
 					</view>
@@ -76,19 +76,19 @@
 			<scroll-view scroll-x="true" class="_abbr">
 
 				<view class="item">
-					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 					<view class="title" style="width: 100%;">
 						<h3 style="">大白兔奶茶</h3>
 					</view>
 				</view>
 				<view class="item">
-					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 					<view class="title" style="width: 100%;">
 						<h3 style="">大白兔奶茶</h3>
 					</view>
 				</view>
 				<view class="item">
-					<image src="../../static/caipusousuo_slices/tupian@3x.png"></image>
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
 					<view class="title" style="width: 100%;">
 						<h3 style="">大白兔奶茶</h3>
 					</view>
@@ -189,7 +189,7 @@
 			// background-color: chocolate;
 			margin: 0 auto;
 			margin-top: 20px;
-			background-image: url("../../static/wode_1_slices/mengbanzu87@2x.png");
+			background-image: url("http://localhost:4000/public/images/mengbanzu87@2x.png");
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 			display: flex;
