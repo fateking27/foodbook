@@ -6,11 +6,12 @@
   },
   "setting": {
     "urlCheck": false,
-    "es6": false,
+    "es6": true,
     "postcss": false,
     "minified": false,
     "newFeature": true,
     "bigPackageSizeSupport": true,
+    "ignoreUploadUnusedFiles": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -18,8 +19,8 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "3.0.0",
-  "appid": "touristappid",
+  "libVersion": "2.33.0",
+  "appid": "wx32975f2f83d837f2",
   "projectname": "foodback",
   "condition": {},
   "editorSetting": {
