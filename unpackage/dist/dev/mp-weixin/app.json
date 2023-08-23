@@ -18,21 +18,21 @@
     "selectedColor": "#ff8001",
     "list": [
       {
-        "iconPath": "/static/wode_1_slices/mengbanzu 41@2x.png",
+        "iconPath": "/static/home_.png",
         "pagePath": "pages/index/index",
-        "selectedIconPath": "/static/wode_1_slices/mengbanzu 41@2x.png",
+        "selectedIconPath": "/static/home.png",
         "text": "首页"
       },
       {
-        "iconPath": "/static/wode_1_slices/mengbanzu 40@2x.png",
+        "iconPath": "/static/vip.png",
         "pagePath": "pages/VIP/VIP",
-        "selectedIconPath": "/static/wode_1_slices/mengbanzu 40@2x.png",
+        "selectedIconPath": "/static/vip-fill.png",
         "text": "VIP会员"
       },
       {
-        "iconPath": "/static/wode_1_slices/mengbanzu39@2x.png",
+        "iconPath": "/static/user_.png",
         "pagePath": "pages/UserCenter/UserCenter",
-        "selectedIconPath": "/static/wode_1_slices/mengbanzu39@2x.png",
+        "selectedIconPath": "/static/user.png",
         "text": "我的"
       }
     ]

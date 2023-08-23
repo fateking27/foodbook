@@ -3,6 +3,8 @@
   "navigationBarBackgroundColor": "#fff",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "u-tabs": "/uni_modules/uview-ui/components/u-tabs/u-tabs"
+    "u-tabs": "/uni_modules/uview-ui/components/u-tabs/u-tabs",
+    "u-cell-group": "/uni_modules/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell": "/uni_modules/uview-ui/components/u-cell/u-cell"
   }
 }

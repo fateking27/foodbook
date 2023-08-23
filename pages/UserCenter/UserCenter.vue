@@ -10,7 +10,7 @@
 					<text style="color: darkgray;">登陆后可收藏喜欢的菜谱</text>
 				</view>
 			</view>
-			
+
 			<view class="to_vip">
 				<span
 					style="font-size: 13px;padding-left: 50px;padding-top: 10px;font-weight: bolder;color: #d4b583;">升级为VIP</span>
@@ -60,7 +60,8 @@
 			</view>
 
 			<view @click="showMore">
-				<view class="" style="text-align: center;padding-top: 10px;font-size: 13px;color: chocolate;padding-bottom: 10px;">
+				<view class=""
+					style="text-align: center;padding-top: 10px;font-size: 13px;color: chocolate;padding-bottom: 10px;">
 					{{isShow ? '🔻收起':'🔺展开全部'}}
 				</view>
 
@@ -95,6 +96,14 @@
 
 			</scroll-view>
 		</view>
+
+		<view class="group" style="">
+			<u-cell-group customStyle="background-color: #fff;">
+				<u-cell icon="thumb-up-fill" title="去App Store给菜谱大全评分" :isLink="true" border="true"></u-cell>
+				<u-cell icon="chat-fill" title="问题反馈" :isLink="true"></u-cell>
+			</u-cell-group>
+		</view>
+
 	</view>
 </template>
 
@@ -150,16 +159,18 @@
 <style lang="scss">
 	.content {
 		background-color: #e8e8e8;
+
 		.user_head {
 			width: 90%;
 			margin: 0 auto;
 			margin-top: 10px;
 			display: flex;
 			align-items: flex-end;
-			
+
 
 			.head_img {
 				background-color: #fff;
+
 				image {
 					width: 80px;
 					height: 80px;
@@ -221,6 +232,7 @@
 		.foodbooks {
 			width: 100%;
 			background-color: #fff;
+
 			.show_more {
 				width: 100%;
 				// height: 2px;
@@ -257,7 +269,7 @@
 		.recommend {
 			width: 100%;
 			margin: 0 auto;
-			margin-top: 15px;
+			margin-top: 10px;
 			// margin-left: 10px;
 			// background-color: #e8e8e8;
 			// padding-top: 15px;
@@ -266,6 +278,7 @@
 				// display: flex;
 				white-space: nowrap;
 				background-color: #fff;
+				padding-bottom: 10px;
 
 				.item {
 					// background-color: aqua;
@@ -285,6 +298,11 @@
 					}
 				}
 			}
+		}
+
+		.group {
+			margin-top: 10px;
+			padding-bottom: 10px;
 		}
 	}
 </style>

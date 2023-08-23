@@ -108,12 +108,13 @@
 .content .recommend {
   width: 100%;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .content .recommend ._abbr {
   width: 100%;
   white-space: nowrap;
   background-color: #fff;
+  padding-bottom: 10px;
 }
 .content .recommend ._abbr .item {
   width: 40%;
@@ -127,5 +128,9 @@
 .content .recommend ._abbr .item image {
   width: 85%;
   height: 95%;
+}
+.content .group {
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 
