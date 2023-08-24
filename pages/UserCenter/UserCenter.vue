@@ -131,7 +131,7 @@
 				isShow: false,
 				isClick: false,
 				isShowText: false,
-				max: 3,
+				max: 5,
 			}
 		},
 		methods: {

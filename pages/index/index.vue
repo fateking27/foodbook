@@ -10,11 +10,11 @@
 			<view class="search">
 				<!-- <u-search inputAlign="center" placeholder="搜你想搜的~" :showAction="false" shape="round" height="35"
 						bgColor="#fff"></u-search> -->
-					<button type="default" @click="goto"
-						style="background-color: #fff;width: 100%;border-radius: 25px;font-size: 16px;color: #999;">
-						<icon type="search" color="#df9040" size="15px"></icon>
-						<span style="padding-left: 7px;">搜你想搜的~</span>
-					</button>
+				<button type="default" @click="goto"
+					style="background-color: #fff;width: 100%;border-radius: 25px;font-size: 16px;color: #999;">
+					<icon type="search" color="#df9040" size="15px"></icon>
+					<span style="padding-left: 7px;">搜你想搜的~</span>
+				</button>
 			</view>
 		</view>
 
@@ -64,7 +64,7 @@
 		</view>
 
 		<view class="container">
-			<view class="item" v-for="(item,index) in recommend" :key="item._id">
+			<view class="item" v-for="(item,index) in recommend" :key="item._id" @click="to_food">
 				<image :src="item.coverpic" style="border-radius: 10px;"></image>
 				<view class="title" style="width: 100%;">
 					<h3>{{item.name}}</h3>
@@ -120,9 +120,14 @@
 						this.recommend = res.data.message
 					})
 			},
-			goto(){
+			goto() {
 				uni.navigateTo({
 					url: "/pages/searchPage/searchPage"
+				})
+			},
+			to_food() {
+				uni.navigateTo({
+					url: "/pages/foodPage/foodPage"
 				})
 			}
 		}

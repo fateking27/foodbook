@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/VIP/VIP",
     "pages/UserCenter/UserCenter",
-    "pages/searchPage/searchPage"
+    "pages/searchPage/searchPage",
+    "pages/foodPage/foodPage"
   ],
   "subPackages": [],
   "window": {

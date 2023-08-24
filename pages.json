@@ -36,8 +36,16 @@
 				"navigationStyle": "custom",
                 "enablePullDownRefresh": false
             }
-            
-        }
+        },
+		{
+		    "path" : "pages/foodPage/foodPage",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "菜谱搜索",
+				"navigationStyle": "custom",
+		        "enablePullDownRefresh": false
+		    }
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

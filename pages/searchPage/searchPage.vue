@@ -10,7 +10,7 @@
 			<span style="position: absolute;top: 95px;left: 320px;">搜索</span>
 			<view class="search">
 				<u-search inputAlign="left" placeholder="搜你想搜的~" :showAction="false" shape="square" height="30"
-					bgColor="#fff" searchIconColor=""></u-search>
+					bgColor="#fff" searchIconColor="#ffaa00"></u-search>
 			</view>
 		</view>
 
