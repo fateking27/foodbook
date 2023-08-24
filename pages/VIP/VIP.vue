@@ -224,23 +224,6 @@
 				</view>
 				<view class="collection" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">2495</text>
-					<image src=".http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
-					</image>
-				</view>
-			</view>
-			<view class="item">
-				<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
-				<view class="title" style="width: 100%;">
-					<h3>大白兔奶茶</h3>
-				</view>
-
-				<view class="watch" style="display: flex;align-items: center;">
-					<text style="font-size: 14px;color: #999;">66.3万</text>
-					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;">
-					</image>
-				</view>
-				<view class="collection" style="display: flex;align-items: center;">
-					<text style="font-size: 14px;color: #999;">2495</text>
 					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
 					</image>
 				</view>
@@ -258,7 +241,24 @@
 				</view>
 				<view class="collection" style="display: flex;align-items: center;">
 					<text style="font-size: 14px;color: #999;">2495</text>
-					<image src="http://localhost:4000/public/images/soucang@2x.png" style="width: 20px;height: 20px;">
+					<image src="http://localhost:4000/public/images/soucang@2x(4).png" style="width: 20px;height: 20px;">
+					</image>
+				</view>
+			</view>
+			<view class="item">
+				<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
+				<view class="title" style="width: 100%;">
+					<h3>大白兔奶茶</h3>
+				</view>
+
+				<view class="watch" style="display: flex;align-items: center;">
+					<text style="font-size: 14px;color: #999;">66.3万</text>
+					<image src="http://localhost:4000/public/images/liulam @2x.png" style="width: 20px;height: 15px;">
+					</image>
+				</view>
+				<view class="collection" style="display: flex;align-items: center;">
+					<text style="font-size: 14px;color: #999;">2495</text>
+					<image src="http://localhost:4000/public/images/soucang@2x(4).png" style="width: 20px;height: 20px;">
 					</image>
 				</view>
 			</view>
