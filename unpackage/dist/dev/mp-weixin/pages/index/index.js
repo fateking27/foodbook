@@ -309,11 +309,6 @@ var _default = {
       uni.navigateTo({
         url: "/pages/searchPage/searchPage"
       });
-    },
-    to_food: function to_food() {
-      uni.navigateTo({
-        url: "/pages/foodPage/foodPage"
-      });
     }
   }
 };

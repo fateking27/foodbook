@@ -5,48 +5,41 @@
 			"style": {
 				"navigationBarTitleText": "uni-app",
 				"navigationStyle": "custom"
-				
+
+			}
+		}, {
+			"path": "pages/VIP/VIP",
+			"style": {
+				"navigationBarTitleText": "VIP会员",
+				"navigationStyle": "custom"
+
+			}
+
+		}, {
+			"path": "pages/UserCenter/UserCenter",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor": "#fff",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/searchPage/searchPage",
+			"style": {
+				"navigationBarTitleText": "菜谱搜索",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/foodPage/foodPage",
+			"style": {
+				"navigationBarTitleText": "菜谱",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
 			}
 		}
-	    ,{
-            "path" : "pages/VIP/VIP",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "VIP会员",
-                "navigationStyle": "custom"
-				
-            }
-            
-        }
-        ,{
-            "path" : "pages/UserCenter/UserCenter",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "我的",
-				"navigationBarBackgroundColor": "#fff",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/searchPage/searchPage",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "菜谱搜索",
-				"navigationStyle": "custom",
-                "enablePullDownRefresh": false
-            }
-        },
-		{
-		    "path" : "pages/foodPage/foodPage",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "菜谱搜索",
-				"navigationStyle": "custom",
-		        "enablePullDownRefresh": false
-		    }
-		}
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
