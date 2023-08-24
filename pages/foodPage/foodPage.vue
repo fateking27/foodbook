@@ -57,19 +57,19 @@
 					<span>切墩（初级）</span>
 				</view>
 			</view>
-			
+
 			<view style="width: 90%;margin: 0 auto;padding-bottom: 15px;white-space: nowrap;">
 				<span style="font-weight: bolder;">用料</span>
 				<span style="color: #999;margin-left: 210px;">移出采购清单</span>
 			</view>
-			
+
 			<view class="list_items">
 				<view class="item" v-for="(item,index) in foods" :key="index">
 					<span>{{item}}</span>
 					<span style="padding-right: 100px;">500g</span>
 				</view>
 			</view>
-			
+
 			<view class="xts" style="width: 95%;margin: 0 auto;margin-top: 15px;">
 				<view class="title_" style="font-size: 17px;font-weight: bold;">
 					小贴士
@@ -83,16 +83,99 @@
 				<view class="title xz">
 					<view>【原料选择】</view>
 					<view style="font-size: 13px;padding: 10px 25px; 20px 0px">
-						1汤匙≈15ml;1茶匙≈3g1汤匙≈15ml;1茶匙≈3g1汤匙≈15ml;1茶匙≈3g1汤匙≈15ml;1茶匙≈3g1汤匙≈15ml;1茶匙≈3g
+						1.川北凉粉：来自四川北部的一道民间小吃，由豌豆粉研制而成，口感细腻，颜色洁白透亮，这是和普通北方凉粉的区别所在。
+						豌豆含有优质蛋白质，可以提高机体的抗病能力和康复能力。
+						<br>
+						2.永川豆豉：永川豆豉属毛霉型豆豉。富含蛋白质和人体所需基
+						酸，香气浓郁，滋味鲜美，即可用于烹饪，也可代菜佐餐，不但营养价值高，又有开胃助食解表驱寒之功效。可在市场、超市购买。
 					</view>
 				</view>
 				<view class="title xz">
 					<view>【烹饪要点】</view>
 					<view style="font-size: 13px;padding: 10px 25px; 20px 0px">
-						1汤匙≈15ml;1茶匙≈3g1汤匙≈15ml;1茶匙≈3g1汤匙≈15ml;1茶匙≈3g1汤匙≈15ml;1茶匙≈3g1汤匙≈15ml;1茶匙≈3g
+						1.怎样使凉粉的味道有层次感？
+						首先放入榨菜末，增加清脆的口感，然后放入香葱，提升菜的香气，接下来放入红油，提升菜的辣味和香味，最后放入花生碎，提升口感。
+						<br>
+						2.为什么没有放盐？
+						在调味时已烹入酱油、豆瓣酱等调味料，故无需要再加盐。如果口味较重，也可根据需求酌情添加。
 					</view>
 				</view>
 			</view>
+		</view>
+
+		<view class="free">
+			<h1 class="title">
+				限时免费体验
+			</h1>
+			<scroll-view scroll-x="true" class="_abbr">
+				<view class="item">
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
+					<view class="title" style="width: 100%;">
+						<h3 style="">大白兔奶茶</h3>
+					</view>
+
+					<view class="" style="display: flex;margin-top: 7px;">
+						<view class="watch" style="display: flex;">
+							<text style="font-size: 14px;color: #999;">66.3万</text>
+							<image src="http://localhost:4000/public/images/liulam @2x.png"
+								style="width: 20px;height: 15px;">
+							</image>
+						</view>
+						<view class="collection" style="display: flex;">
+							<text style="font-size: 14px;color: #999;">2495</text>
+							<image src="http://localhost:4000/public/images/soucang@2x.png"
+								style="width: 20px;height: 20px;">
+							</image>
+						</view>
+					</view>
+
+				</view>
+				<view class="item">
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
+					<view class="title" style="width: 100%;">
+						<h3 style="">大白兔奶茶</h3>
+					</view>
+
+					<view class="" style="display: flex;margin-top: 7px;">
+						<view class="watch" style="display: flex;">
+							<text style="font-size: 14px;color: #999;">66.3万</text>
+							<image src="http://localhost:4000/public/images/liulam @2x.png"
+								style="width: 20px;height: 15px;">
+							</image>
+						</view>
+						<view class="collection" style="display: flex;">
+							<text style="font-size: 14px;color: #999;">2495</text>
+							<image src="http://localhost:4000/public/images/soucang@2x.png"
+								style="width: 20px;height: 20px;">
+							</image>
+						</view>
+					</view>
+
+				</view>
+				<view class="item">
+					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
+					<view class="title" style="width: 100%;">
+						<h3 style="">大白兔奶茶</h3>
+					</view>
+
+					<view class="" style="display: flex;margin-top: 7px;">
+						<view class="watch" style="display: flex;">
+							<text style="font-size: 14px;color: #999;">66.3万</text>
+							<image src="http://localhost:4000/public/images/liulam @2x.png"
+								style="width: 20px;height: 15px;">
+							</image>
+						</view>
+						<view class="collection" style="display: flex;">
+							<text style="font-size: 14px;color: #999;">2495</text>
+							<image src="http://localhost:4000/public/images/soucang@2x.png"
+								style="width: 20px;height: 20px;">
+							</image>
+						</view>
+					</view>
+
+				</view>
+
+			</scroll-view>
 		</view>
 	</view>
 </template>
@@ -150,7 +233,7 @@
 				height: 20px;
 				padding-right: 20px;
 			}
-			
+
 		}
 	}
 
@@ -165,28 +248,30 @@
 		text-align: center;
 		line-height: 50px;
 	}
-	
-	.vip_use{
+
+	.vip_use {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding-top: 20px;
-		image{
+
+		image {
 			width: 17px;
 			height: 13px;
 			padding: 0 7px;
 		}
-		span{
+
+		span {
 			font-size: 13px;
 			color: #999;
 		}
 	}
-	
+
 	.list_items {
 		width: 92%;
 		margin: 0 auto;
 		border-bottom: 1px solid #bdbdbd;
-	
+
 		.item {
 			width: 100%;
 			display: flex;
@@ -196,28 +281,65 @@
 			padding: 10px 0;
 		}
 	}
-	
-	.yl{
+
+	.yl {
 		display: flex;
 		// background-color: #eec176;
 		justify-content: center;
+
 		// height: 40px;
-		image{
+		image {
 			width: 25px;
 			height: 25px;
 		}
-		.time,.level{
+
+		.time,
+		.level {
 			// height: 100%;
 			// background-color: aqua;
 			display: flex;
 			align-items: center;
-			padding:20px 10px;
+			padding: 20px 10px;
 		}
 	}
-	
-	.xts{
-		.title{
+
+	.xts {
+		.title {
 			color: #666;
+		}
+	}
+
+	.free{
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-left: 10px;
+
+		._abbr {
+			width: 100%;
+			// display: flex;
+			white-space: nowrap;
+
+			.item {
+				// background-color: aqua;
+				width: 45%;
+				height: 110pt;
+				border-radius: 10px;
+				margin-top: 10px;
+				// display: flex;
+				// flex-wrap: wrap;
+				padding-right: 5px;
+				display: inline-block;
+
+				.watch {
+					padding-right: 30px;
+				}
+
+				image {
+					width: 100%;
+					height: 75%;
+				}
+			}
 		}
 	}
 </style>
