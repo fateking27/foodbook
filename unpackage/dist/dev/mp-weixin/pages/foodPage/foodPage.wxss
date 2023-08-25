@@ -104,26 +104,32 @@
   align-items: center;
   padding: 20px 10px;
 }
+.xts {
+  padding-bottom: 10px;
+}
 .xts .title {
   color: #666;
 }
 .free {
   width: 100%;
   margin: 0 auto;
-  margin-top: 20px;
-  margin-left: 10px;
+  margin-top: 15px;
+  background-color: #fff;
+  padding-bottom: 20px;
 }
 .free ._abbr {
   width: 100%;
   white-space: nowrap;
+  margin-left: 20px;
 }
 .free ._abbr .item {
-  width: 45%;
-  height: 110pt;
+  width: 60%;
+  height: 140pt;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
   padding-right: 5px;
   display: inline-block;
+  margin-right: 15px;
 }
 .free ._abbr .item .watch {
   padding-right: 30px;

@@ -101,10 +101,13 @@ var components
 try {
   components = {
     uGrid: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid/u-grid */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid/u-grid")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid/u-grid.vue */ 208))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid/u-grid */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid/u-grid")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid/u-grid.vue */ 224))
     },
     uGridItem: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid-item/u-grid-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid-item/u-grid-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid-item/u-grid-item.vue */ 216))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid-item/u-grid-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid-item/u-grid-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid-item/u-grid-item.vue */ 232))
+    },
+    uToast: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-toast/u-toast */ "uni_modules/uview-ui/components/u-toast/u-toast").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-toast/u-toast.vue */ 314))
     },
   }
 } catch (e) {
@@ -276,6 +279,7 @@ var _common = _interopRequireDefault(__webpack_require__(/*! @/utils/common.js *
 //
 //
 //
+//
 var _default = {
   data: function data() {
     return {
@@ -295,13 +299,13 @@ var _default = {
         _this.swiper_list = res.data.message;
         // console.log(res)
       }), _common.default.getAllCatitems({}).then(function (res) {
-        // console.log(res)
+        console.log(res);
         _this.catitems = res.data.message;
       }), _common.default.getAllFloorsdata({}).then(function (res) {
         _this.floorsdata = res.data.message;
         // console.log(this.floorsdata)
       }), _common.default.getAllRecommend({}).then(function (res) {
-        console.log(res);
+        // console.log(res)
         _this.recommend = res.data.message;
       });
     },
@@ -313,6 +317,12 @@ var _default = {
     to_food: function to_food() {
       uni.navigateTo({
         url: "/pages/foodPage/foodPage"
+      });
+    },
+    to_category: function to_category(index) {
+      console.log(this.catitems[index]._id);
+      uni.navigateTo({
+        url: this.catitems[index].navigator_url
       });
     }
   }

@@ -7,4 +7,5 @@ export default {
 	getAllCatitems: (params) => request.get("/home/catitems", params),
 	getAllFloorsdata: (params) => request.get("/home/floorsdata", params),
 	getAllRecommend: (params) => request.get("/home/recommend", params),
+	getAllGategories: (params) => request.get("/categories", params),
 }

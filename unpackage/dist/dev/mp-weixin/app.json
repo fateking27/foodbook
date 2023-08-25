@@ -4,7 +4,9 @@
     "pages/VIP/VIP",
     "pages/UserCenter/UserCenter",
     "pages/searchPage/searchPage",
-    "pages/foodPage/foodPage"
+    "pages/foodPage/foodPage",
+    "pages/foodPage/foodPage_",
+    "pages/categories/categories"
   ],
   "subPackages": [],
   "window": {

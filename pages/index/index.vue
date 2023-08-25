@@ -26,12 +26,13 @@
 
 		<view class="grid" style="margin-top: 15px;">
 			<u-grid :border="false" col="5">
-				<u-grid-item v-for="(listItem,listIndex) in catitems" :key="listItem.id">
+				<u-grid-item v-for="(listItem,listIndex) in catitems" :key="listItem.id" @click="to_category">
 					<img style="width: 30px;height: 30px;" :customStyle="{paddingTop:20+'rpx'}"
 						:src="listItem.image_src" />
 					<text class="grid-text">{{listItem.name}}</text>
 				</u-grid-item>
 			</u-grid>
+			<u-toast ref="uToast"></u-toast>
 		</view>
 
 		<view class="show_img">
@@ -108,7 +109,7 @@
 						// console.log(res)
 					}),
 					common.getAllCatitems({}).then((res) => {
-						// console.log(res)
+						console.log(res)
 						this.catitems = res.data.message
 					}),
 					common.getAllFloorsdata({}).then((res) => {
@@ -116,7 +117,7 @@
 						// console.log(this.floorsdata)
 					}),
 					common.getAllRecommend({}).then((res) => {
-						console.log(res)
+						// console.log(res)
 						this.recommend = res.data.message
 					})
 			},
@@ -125,9 +126,15 @@
 					url: "/pages/searchPage/searchPage"
 				})
 			},
-			to_food(){
+			to_food() {
 				uni.navigateTo({
-					url:"/pages/foodPage/foodPage"
+					url: "/pages/foodPage/foodPage"
+				})
+			},
+			to_category(index) {
+				console.log((this.catitems[index]._id))
+				uni.navigateTo({
+					url: this.catitems[index].navigator_url
 				})
 			}
 		}

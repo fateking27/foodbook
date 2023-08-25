@@ -104,8 +104,9 @@
 		</view>
 
 		<view class="free">
-			<h1 class="title">
-				限时免费体验
+			<h1 class="title" style="margin-left: 20px;
+			padding-top: 20px;font-weight: bold;">
+				相关菜谱
 			</h1>
 			<scroll-view scroll-x="true" class="_abbr">
 				<view class="item">
@@ -304,32 +305,38 @@
 	}
 
 	.xts {
+		padding-bottom: 10px;
 		.title {
 			color: #666;
 		}
 	}
 
-	.free{
+	.free {
 		width: 100%;
 		margin: 0 auto;
-		margin-top: 20px;
-		margin-left: 10px;
+		margin-top: 15px;
+		// margin-left: 10px;
+		background-color: #fff;
+		padding-bottom: 20px;
+
 
 		._abbr {
 			width: 100%;
 			// display: flex;
 			white-space: nowrap;
+			margin-left: 20px;
 
 			.item {
 				// background-color: aqua;
-				width: 45%;
-				height: 110pt;
+				width: 60%;
+				height: 140pt;
 				border-radius: 10px;
-				margin-top: 10px;
+				margin-top: 15px;
 				// display: flex;
 				// flex-wrap: wrap;
 				padding-right: 5px;
 				display: inline-block;
+				margin-right: 15px;
 
 				.watch {
 					padding-right: 30px;
