@@ -1,5 +1,6 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "食材分类",
+  "navigationBarBackgroundColor": "#ee7b2d",
   "enablePullDownRefresh": false,
   "usingComponents": {
     "u-search": "/uni_modules/uview-ui/components/u-search/u-search"

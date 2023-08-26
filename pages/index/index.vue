@@ -133,8 +133,10 @@
 			},
 			to_category(index) {
 				console.log((this.catitems[index]._id))
+				let url = this.catitems[index].navigator_url
+				let id = this.catitems[index]._id
 				uni.navigateTo({
-					url: this.catitems[index].navigator_url
+					url: url + "?" + "_id=" + id
 				})
 			}
 		}

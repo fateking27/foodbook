@@ -8,4 +8,8 @@ export default {
 	getAllFloorsdata: (params) => request.get("/home/floorsdata", params),
 	getAllRecommend: (params) => request.get("/home/recommend", params),
 	getAllGategories: (params) => request.get("/categories", params),
+	
+	wxLogin: (params) => request.post("/user/wxLogin", params),
+	getUserInfo: (params) => request.get("/user/getUserInfo", params),
+	auth: (params) => request.post("/user/auth", params),
 }

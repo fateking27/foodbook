@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<view class="" style="background-color: #fff;width: 100%;">
-			<view class="user_head">
+			<!-- <view class="user_head" @wxlogin="login3">
 				<view class="head_img">
 					<image src="http://localhost:4000/public/images/zu428@2x.png" mode=""></image>
 				</view>
@@ -9,8 +9,8 @@
 					<text>立即登录</text> <br>
 					<text style="color: darkgray;">登陆后可收藏喜欢的菜谱</text>
 				</view>
-			</view>
-
+			</view> -->
+			<userinfo @wxlogin="login3"></userinfo>
 			<view class="to_vip">
 				<span
 					style="font-size: 13px;padding-left: 50px;padding-top: 10px;font-weight: bolder;color: #d4b583;">升级为VIP</span>
@@ -108,6 +108,8 @@
 </template>
 
 <script>
+	import {createNamespacedHelpers} from "vuex";
+	const {mapActions} = createNamespacedHelpers("user")
 	export default {
 		data() {
 			return {
@@ -150,7 +152,42 @@
 					}, 200)
 				}
 
-			}
+			},
+			...mapActions(["wxlogin"]),
+			login3() {
+				//1、获取微信用户信息
+				let userPromise = new Promise((resolve, reject) => {
+					uni.getUserProfile({
+						desc:"登录",
+						success: (userRes) => {
+							resolve(userRes)
+						}
+					})
+				})
+				
+				
+				//2、获取微信登录用的code
+				let codePromise = new Promise((resolve, reject) => {
+					uni.login({
+						success: (codeRes) => {
+							resolve(codeRes)
+						}
+					})
+				})
+				
+				
+				userPromise.then(userRes => {
+					codePromise.then(async codeRes => {
+						
+						this.wxlogin({
+							code: codeRes.code,
+							...userRes.userInfo
+						})
+					})
+				})
+				
+			},
+			
 		},
 
 	}

@@ -53,7 +53,8 @@
             "path" : "pages/categories/categories",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "食材分类",
+				"navigationBarBackgroundColor": "#ee7b2d",
                 "enablePullDownRefresh": false
             }
             
