@@ -49,9 +49,9 @@ export default {
 	mutations: {
 		SET_LOGINUSER(state, obj) {
 			//保存登录用户和token到storage中
-			uni.setStorageSync("LoginUser", JSON.stringify(obj))
+			// uni.setStorageSync("LoginUser", JSON.stringify(obj))
 			uni.setStorageSync("expriseTime", new Date().getTime())
-			state.loginUser = obj;
+			// state.loginUser = obj;
 		}
 	},
 	//设置数据-异步方法

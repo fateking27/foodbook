@@ -11,10 +11,11 @@
 		
 		<view class="userinfo">
 			<view class="userhead" @tap="login3">
-				<image :src="getAvatar" mode="aspectFill"></image>
+				<image v-show="!isShow" :src="getAvatar" mode="aspectFill"></image>
+				<image v-show="isShow" src="http://localhost:4000/public/images/zu428@2x.png" mode=""></image>
 			</view>
 			<view class="usernick" @tap="login3">
-				<text>{{getNickName}}</text> <br>
+				<text>{{getNickName}}</text><br>
 				<text v-show="isShow" style="color: darkgray;">登陆后可收藏喜欢的菜谱</text>
 				<text v-show="!isShow" style="color: darkgray;">{{getNickName}},欢迎你的到来~</text>
 			</view>
