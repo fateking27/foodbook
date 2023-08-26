@@ -46,14 +46,15 @@
 			<u-tabs :list="mycollect" :activeStyle="{
 			color: '#f6be7a',
             fontWeight: 'bold',
-            transform: 'scale(1.05)'}" lineWidth="0" click="menuDetail(id)"></u-tabs>
+            transform: 'scale(1.05)'}" lineWidth="0" @click="menuDetail"></u-tabs>
 
 			<view class="show_more" :class="[isShow ? 'show-more-click' : '']">
 
 				<view class="list_items">
-					<view class="item" v-for="(item,index) in foods" v-if="isShowText || index < max">
-						<span>{{item}}</span>
-						<span style="padding-right: 100px;">500g</span>
+					<view class="item" v-for="(item,index) in menu.ingredient" :key="index"
+						v-if="isShowText || index < max">
+						<span>{{item.name}}</span>
+						<span style="padding-right: 100px;">{{item.number}}</span>
 					</view>
 				</view>
 
@@ -64,9 +65,7 @@
 					style="text-align: center;padding-top: 10px;font-size: 13px;color: chocolate;padding-bottom: 10px;">
 					{{isShow ? '🔻收起':'🔺展开全部'}}
 				</view>
-
 			</view>
-
 		</view>
 
 		<view class="recommend">
@@ -96,37 +95,26 @@
 
 <script>
 	import common from "@/utils/common.js"
-	import {createNamespacedHelpers} from "vuex";
-	const {mapActions} = createNamespacedHelpers("user")
+	import {
+		createNamespacedHelpers
+	} from "vuex";
+	const {
+		mapActions
+	} = createNamespacedHelpers("user")
 	export default {
 		data() {
 			return {
-				list1: [{
-						name: '所有食材',
-					},
-					{
-						name: '蜜豆鲷鱼烧',
-					},
-					{
-						name: '川北凉粉',
-					},
-					{
-						name: '牛肉披萨',
-					},
-					{
-						name: '奶油泡芙',
-					}
-				],
-				foods: ['豌豆凉粉', '小葱末', '榨菜末', '花生碎', '花生碎', '花生碎', '花生碎'],
 				isShow: false,
 				isClick: false,
 				isShowText: false,
 				max: 5,
-				mycollect:[]
+				mycollect: [],
+				menu: []
 			}
 		},
 		onLoad() {
-			this.get_collect()
+			this.get_collect(),
+			this.menuDetail
 		},
 		methods: {
 			showMore() {
@@ -150,14 +138,14 @@
 				//1、获取微信用户信息
 				let userPromise = new Promise((resolve, reject) => {
 					uni.getUserProfile({
-						desc:"登录",
+						desc: "登录",
 						success: (userRes) => {
 							resolve(userRes)
 						}
 					})
 				})
-				
-				
+
+
 				//2、获取微信登录用的code
 				let codePromise = new Promise((resolve, reject) => {
 					uni.login({
@@ -166,18 +154,18 @@
 						}
 					})
 				})
-				
-				
+
+
 				userPromise.then(userRes => {
 					codePromise.then(async codeRes => {
-						
+
 						this.wxlogin({
 							code: codeRes.code,
 							...userRes.userInfo
 						})
 					})
 				})
-				
+
 			},
 			get_collect() {
 				let user_id = JSON.parse(uni.getStorageSync("LoginUser"))._id
@@ -185,22 +173,16 @@
 				common.getUserGetCollect({
 					_id: user_id
 				}).then(res => {
-					
+
 					this.mycollect = res.data.mycollect
 					console.log(this.mycollect)
 				})
 			},
-			menuDetail(id) {
-				console.log(id)
-				// let url_id = urlString.split("=");
-				// console.log(url_id)
-				// common.getMmenuDetail(url_id).then(res => {
-				// 	this.Detail = res.data.message
-				// 	// console.log(111, this.Detail)
-				// })
+			menuDetail(item) {
+				this.menu = item
+				// console.log(this.menu)
 			},
 		},
-
 	}
 </script>
 
@@ -318,6 +300,7 @@
 			width: 100%;
 			margin: 0 auto;
 			margin-top: 10px;
+
 			// margin-left: 10px;
 			// background-color: #e8e8e8;
 			// padding-top: 15px;

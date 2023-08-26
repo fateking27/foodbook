@@ -186,27 +186,16 @@ var _createNamespacedHelp = (0, _vuex.createNamespacedHelpers)("user"),
 var _default = {
   data: function data() {
     return {
-      list1: [{
-        name: '所有食材'
-      }, {
-        name: '蜜豆鲷鱼烧'
-      }, {
-        name: '川北凉粉'
-      }, {
-        name: '牛肉披萨'
-      }, {
-        name: '奶油泡芙'
-      }],
-      foods: ['豌豆凉粉', '小葱末', '榨菜末', '花生碎', '花生碎', '花生碎', '花生碎'],
       isShow: false,
       isClick: false,
       isShowText: false,
       max: 5,
-      mycollect: []
+      mycollect: [],
+      menu: []
     };
   },
   onLoad: function onLoad() {
-    this.get_collect();
+    this.get_collect(), this.menuDetail;
   },
   methods: _objectSpread(_objectSpread({
     showMore: function showMore() {
@@ -280,14 +269,9 @@ var _default = {
         console.log(_this3.mycollect);
       });
     },
-    menuDetail: function menuDetail(id) {
-      console.log(id);
-      // let url_id = urlString.split("=");
-      // console.log(url_id)
-      // common.getMmenuDetail(url_id).then(res => {
-      // 	this.Detail = res.data.message
-      // 	// console.log(111, this.Detail)
-      // })
+    menuDetail: function menuDetail(item) {
+      this.menu = item;
+      // console.log(this.menu)
     }
   })
 };
