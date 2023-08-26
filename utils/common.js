@@ -8,6 +8,10 @@ export default {
 	getAllFloorsdata: (params) => request.get("/home/floorsdata", params),
 	getAllRecommend: (params) => request.get("/home/recommend", params),
 	getAllGategories: (params) => request.get("/categories", params),
+	getAllMemberRecommend: (params) => request.get("/search/memberRecommend", params),
+	getMmenuDetail: (params) => request.post("/search/menuDetail", params),
+	getUserCollect: (params) => request.post("/user/collect", params),
+	getUserGetCollect: (params) => request.get("/user/getcollect", params),
 	
 	wxLogin: (params) => request.post("/user/wxLogin", params),
 	getUserInfo: (params) => request.get("/user/getUserInfo", params),

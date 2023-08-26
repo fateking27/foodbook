@@ -65,7 +65,7 @@
 		</view>
 
 		<view class="container">
-			<view class="item" v-for="(item,index) in recommend" :key="item._id" @click="to_food">
+			<view class="item" v-for="(item,index) in recommend" :key="item._id" @click="to_food(item._id)">
 				<image :src="item.coverpic" style="border-radius: 10px;"></image>
 				<view class="title" style="width: 100%;">
 					<h3>{{item.name}}</h3>
@@ -126,9 +126,10 @@
 					url: "/pages/searchPage/searchPage"
 				})
 			},
-			to_food() {
+			to_food(id) {
+				console.log(id)
 				uni.navigateTo({
-					url: "/pages/foodPage/foodPage"
+					url: "/pages/foodPage/foodPage_?_id=" + id
 				})
 			},
 			to_category(index) {

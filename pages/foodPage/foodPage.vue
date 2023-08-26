@@ -5,7 +5,7 @@
 				<u-icon name="arrow-left" size="24px" color="#fff"></u-icon>
 			</view>
 			<view class="title">
-				红豆鲷鱼烧
+				{{Detail[0].name}}
 			</view>
 			<view class="sf">
 				<view class="s">
@@ -20,7 +20,7 @@
 		<view class="show_img">
 			<image style="width: 100%;
 			height: 200px;
-			display: block;" src="http://localhost:4000/public/images/tupian1@2x.png"></image>
+			display: block;" :src="Detail[0].coverpic"></image>
 		</view>
 		<view style="width: 100%;background-color: #fff;padding: 15px 0;">
 			<view class="to_vip">
@@ -31,7 +31,7 @@
 			padding-top: 20px;
 			font-size: 20px;
 			font-weight: bolder;">
-				川北凉粉
+				{{Detail[0].name}}
 			</view>
 
 			<view class="vip_use">
@@ -182,15 +182,33 @@
 </template>
 
 <script>
+	import common from "@/utils/common.js"
+	import {
+		URLSearchParams
+	} from "url";
 	export default {
 		data() {
 			return {
 				foods: ['豌豆凉粉', '小葱末', '榨菜末', '花生碎', '花生碎', '花生碎', '花生碎'],
+				Detail:[]
 			};
+		},
+		onLoad() {
+			this.menuDetail()
 		},
 		methods: {
 			goto() {
 				uni.navigateBack({})
+			},
+			menuDetail() {
+				let url_id = getCurrentPages()[1].options
+				// let url_id = urlString.split("=");
+				// console.log(url_id)
+				common.getMmenuDetail(url_id).then(res => {
+					
+					this.Detail = res.data.message
+					console.log(111,this.Detail)
+				})
 			}
 		}
 	}
@@ -306,6 +324,7 @@
 
 	.xts {
 		padding-bottom: 10px;
+
 		.title {
 			color: #666;
 		}

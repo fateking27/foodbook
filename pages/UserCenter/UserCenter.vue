@@ -75,25 +75,12 @@
 			</h1>
 			<scroll-view scroll-x="true" class="_abbr">
 
-				<view class="item">
-					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
+				<view class="item" v-for="item in mycollect" :key="item._id">
+					<image style="border-radius: 10px;" :src="item.coverpic"></image>
 					<view class="title" style="width: 100%;">
-						<h3 style="">大白兔奶茶</h3>
+						<h3 style="">{{item.name}}</h3>
 					</view>
 				</view>
-				<view class="item">
-					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
-					<view class="title" style="width: 100%;">
-						<h3 style="">大白兔奶茶</h3>
-					</view>
-				</view>
-				<view class="item">
-					<image src="http://localhost:4000/public/images/tupian@3x.png"></image>
-					<view class="title" style="width: 100%;">
-						<h3 style="">大白兔奶茶</h3>
-					</view>
-				</view>
-
 			</scroll-view>
 		</view>
 
@@ -108,6 +95,7 @@
 </template>
 
 <script>
+	import common from "@/utils/common.js"
 	import {createNamespacedHelpers} from "vuex";
 	const {mapActions} = createNamespacedHelpers("user")
 	export default {
@@ -134,7 +122,11 @@
 				isClick: false,
 				isShowText: false,
 				max: 5,
+				mycollect:[]
 			}
+		},
+		onLoad() {
+			this.get_collect()
 		},
 		methods: {
 			showMore() {
@@ -187,7 +179,17 @@
 				})
 				
 			},
-			
+			get_collect() {
+				let user_id = JSON.parse(uni.getStorageSync("LoginUser"))._id
+				// console.log(222, user_id)
+				common.getUserGetCollect({
+					_id: user_id
+				}).then(res => {
+					
+					this.mycollect = res.data.mycollect
+					console.log(this.mycollect)
+				})
+			}
 		},
 
 	}

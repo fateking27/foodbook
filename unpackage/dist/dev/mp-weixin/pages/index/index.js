@@ -101,13 +101,13 @@ var components
 try {
   components = {
     uGrid: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid/u-grid */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid/u-grid")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid/u-grid.vue */ 220))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid/u-grid */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid/u-grid")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid/u-grid.vue */ 227))
     },
     uGridItem: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid-item/u-grid-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid-item/u-grid-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid-item/u-grid-item.vue */ 228))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid-item/u-grid-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid-item/u-grid-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid-item/u-grid-item.vue */ 235))
     },
     uToast: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-toast/u-toast */ "uni_modules/uview-ui/components/u-toast/u-toast").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-toast/u-toast.vue */ 236))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-toast/u-toast */ "uni_modules/uview-ui/components/u-toast/u-toast").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-toast/u-toast.vue */ 243))
     },
   }
 } catch (e) {
@@ -314,9 +314,10 @@ var _default = {
         url: "/pages/searchPage/searchPage"
       });
     },
-    to_food: function to_food() {
+    to_food: function to_food(id) {
+      console.log(id);
       uni.navigateTo({
-        url: "/pages/foodPage/foodPage"
+        url: "/pages/foodPage/foodPage_?_id=" + id
       });
     },
     to_category: function to_category(index) {

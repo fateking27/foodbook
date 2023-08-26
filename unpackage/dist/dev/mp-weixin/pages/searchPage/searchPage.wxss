@@ -72,6 +72,7 @@
 .recommend ._abbr .item image {
   width: 100%;
   height: 75%;
+  border-radius: 7px;
 }
 .foodbook_search .item {
   display: flex;

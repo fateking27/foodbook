@@ -101,16 +101,16 @@ var components
 try {
   components = {
     userinfo: function () {
-      return __webpack_require__.e(/*! import() | components/userinfo/userinfo */ "components/userinfo/userinfo").then(__webpack_require__.bind(null, /*! @/components/userinfo/userinfo.vue */ 243))
+      return __webpack_require__.e(/*! import() | components/userinfo/userinfo */ "components/userinfo/userinfo").then(__webpack_require__.bind(null, /*! @/components/userinfo/userinfo.vue */ 250))
     },
     uTabs: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabs/u-tabs.vue */ 250))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabs/u-tabs.vue */ 257))
     },
     uCellGroup: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-cell-group/u-cell-group */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-cell-group/u-cell-group")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-cell-group/u-cell-group.vue */ 258))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-cell-group/u-cell-group */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-cell-group/u-cell-group")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-cell-group/u-cell-group.vue */ 265))
     },
     uCell: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-cell/u-cell */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-cell/u-cell")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-cell/u-cell.vue */ 266))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-cell/u-cell */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-cell/u-cell")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-cell/u-cell.vue */ 273))
     },
   }
 } catch (e) {
@@ -177,6 +177,7 @@ exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 55));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 57));
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _common = _interopRequireDefault(__webpack_require__(/*! @/utils/common.js */ 161));
 var _vuex = __webpack_require__(/*! vuex */ 159);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -200,8 +201,12 @@ var _default = {
       isShow: false,
       isClick: false,
       isShowText: false,
-      max: 5
+      max: 5,
+      mycollect: []
     };
+  },
+  onLoad: function onLoad() {
+    this.get_collect();
   },
   methods: _objectSpread(_objectSpread({
     showMore: function showMore() {
@@ -262,6 +267,17 @@ var _default = {
             return _ref.apply(this, arguments);
           };
         }());
+      });
+    },
+    get_collect: function get_collect() {
+      var _this3 = this;
+      var user_id = JSON.parse(uni.getStorageSync("LoginUser"))._id;
+      // console.log(222, user_id)
+      _common.default.getUserGetCollect({
+        _id: user_id
+      }).then(function (res) {
+        _this3.mycollect = res.data.mycollect;
+        console.log(_this3.mycollect);
       });
     }
   })

@@ -49,7 +49,7 @@ export default {
 				loginUser = JSON.parse(loginUser);
 				token = loginUser.token;
 			}
-			console.log(666,url,loginUser)
+			console.log(666,url)
 			uni.request({
 				url: BASE_URL + url, //仅为示例，并非真实接口地址。
 				method: "GET",
@@ -59,7 +59,7 @@ export default {
 					"Authorization": token
 				},
 				success: (res) => {
-					console.log(555,res)
+					// console.log(555,res)
 					if (200 == res.statusCode) {
 						resolve(res)
 					} else {
