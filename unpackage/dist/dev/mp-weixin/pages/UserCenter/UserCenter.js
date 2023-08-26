@@ -279,6 +279,15 @@ var _default = {
         _this3.mycollect = res.data.mycollect;
         console.log(_this3.mycollect);
       });
+    },
+    menuDetail: function menuDetail(id) {
+      console.log(id);
+      // let url_id = urlString.split("=");
+      // console.log(url_id)
+      // common.getMmenuDetail(url_id).then(res => {
+      // 	this.Detail = res.data.message
+      // 	// console.log(111, this.Detail)
+      // })
     }
   })
 };

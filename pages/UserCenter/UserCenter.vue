@@ -43,10 +43,10 @@
 		</view>
 
 		<view class="foodbooks">
-			<u-tabs :list="list1" :activeStyle="{
+			<u-tabs :list="mycollect" :activeStyle="{
 			color: '#f6be7a',
             fontWeight: 'bold',
-            transform: 'scale(1.05)'}" lineWidth="0"></u-tabs>
+            transform: 'scale(1.05)'}" lineWidth="0" click="menuDetail(id)"></u-tabs>
 
 			<view class="show_more" :class="[isShow ? 'show-more-click' : '']">
 
@@ -189,7 +189,16 @@
 					this.mycollect = res.data.mycollect
 					console.log(this.mycollect)
 				})
-			}
+			},
+			menuDetail(id) {
+				console.log(id)
+				// let url_id = urlString.split("=");
+				// console.log(url_id)
+				// common.getMmenuDetail(url_id).then(res => {
+				// 	this.Detail = res.data.message
+				// 	// console.log(111, this.Detail)
+				// })
+			},
 		},
 
 	}
