@@ -101,10 +101,10 @@ var components
 try {
   components = {
     uIcon: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-icon/u-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 281))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-icon/u-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 297))
     },
     uSearch: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-search/u-search */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-search/u-search")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-search/u-search.vue */ 290))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-search/u-search */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-search/u-search")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-search/u-search.vue */ 306))
     },
   }
 } catch (e) {
@@ -252,14 +252,58 @@ var _common = _interopRequireDefault(__webpack_require__(/*! @/utils/common.js *
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      memberRecommends: []
+      memberRecommends: [],
+      timer: null,
+      val: '',
+      // 搜索的结果列表
+      menu: [],
+      detail: [],
+      cook: [],
+      recommend: [],
+      pageSize: 10000,
+      currentPage: 1,
+      // 是否是第一次进来，展示随机推荐
+      ifFirst: true
     };
   },
   onLoad: function onLoad() {
     this.memberRecommend();
+    this.getRecommendList();
   },
   methods: {
     goto: function goto() {
@@ -270,6 +314,52 @@ var _default = {
       _common.default.getAllMemberRecommend({}).then(function (res) {
         _this.memberRecommends = res.data.message;
         console.log(_this.memberRecommends);
+      });
+    },
+    gotoDetail: function gotoDetail(id) {
+      console.log(id);
+      uni.navigateTo({
+        url: '/pages/foodPage/foodPage_?_id=' + id
+      });
+    },
+    // input 输入事件的处理函数
+    input: function input(e) {
+      var _this2 = this;
+      clearTimeout(this.timer);
+      this.timer = setTimeout(function () {
+        _this2.val = e;
+        // this.getSearchList()
+        console.log(_this2.val);
+      }, 500);
+    },
+    getSearchList: function getSearchList() {
+      var _this3 = this;
+      if (!this.val.trim()) {
+        this.menu = [];
+        return;
+      }
+      this.ifFirst = false;
+      _common.default.getsearchMenu({
+        pageSize: this.pageSize,
+        currentPage: this.currentPage,
+        val: this.val
+      }).then(function (res) {
+        console.log(_this3.memberRecommends);
+        _this3.menu = res.data.menus;
+      });
+    },
+    getRecommendList: function getRecommendList() {
+      var _this4 = this;
+      var url_name = getCurrentPages()[getCurrentPages().length - 1].options;
+      this.val = url_name.name;
+      console.log("uuu", this.val);
+      _common.default.getsearchMenu({
+        pageSize: 12,
+        currentPage: this.currentPage,
+        val: this.val
+      }).then(function (res) {
+        console.log(_this4.memberRecommends);
+        _this4.recommend = res.data.menus;
       });
     }
   }

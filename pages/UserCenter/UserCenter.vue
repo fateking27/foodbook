@@ -11,7 +11,7 @@
 				</view>
 			</view> -->
 			<userinfo @wxlogin="login3"></userinfo>
-			<view class="to_vip">
+			<view class="to_vip" @click="becomeVipHandler">
 				<span
 					style="font-size: 13px;padding-left: 50px;padding-top: 10px;font-weight: bolder;color: #d4b583;">升级为VIP</span>
 				<span
@@ -114,7 +114,7 @@
 		},
 		onLoad() {
 			this.get_collect(),
-			this.menuDetail
+				this.menuDetail
 		},
 		methods: {
 			showMore() {
@@ -181,6 +181,11 @@
 			menuDetail(item) {
 				this.menu = item
 				// console.log(this.menu)
+			},
+			becomeVipHandler() {
+				uni.navigateTo({
+					url: '/pages/buyVIP/buyVIP'
+				})
 			},
 		},
 	}

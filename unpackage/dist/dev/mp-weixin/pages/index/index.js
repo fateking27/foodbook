@@ -101,13 +101,13 @@ var components
 try {
   components = {
     uGrid: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid/u-grid */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid/u-grid")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid/u-grid.vue */ 227))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid/u-grid */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid/u-grid")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid/u-grid.vue */ 243))
     },
     uGridItem: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid-item/u-grid-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid-item/u-grid-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid-item/u-grid-item.vue */ 235))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-grid-item/u-grid-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-grid-item/u-grid-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-grid-item/u-grid-item.vue */ 251))
     },
     uToast: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-toast/u-toast */ "uni_modules/uview-ui/components/u-toast/u-toast").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-toast/u-toast.vue */ 243))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-toast/u-toast */ "uni_modules/uview-ui/components/u-toast/u-toast").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-toast/u-toast.vue */ 259))
     },
   }
 } catch (e) {
@@ -323,9 +323,9 @@ var _default = {
     to_category: function to_category(index) {
       console.log(this.catitems[index]._id);
       var url = this.catitems[index].navigator_url;
-      var id = this.catitems[index]._id;
+      var menu_name = this.catitems[index].name;
       uni.navigateTo({
-        url: url + "?" + "_id=" + id
+        url: url + "?" + "name=" + menu_name
       });
     }
   }

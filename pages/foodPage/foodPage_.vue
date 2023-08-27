@@ -219,9 +219,9 @@
 				uni.navigateBack({})
 			},
 			menuDetail() {
-				let url_id = getCurrentPages()[1].options
+				let url_id = getCurrentPages()[getCurrentPages().length-1].options
 				// let url_id = urlString.split("=");
-				// console.log(url_id)
+				console.log(9999,url_id)
 				common.getMmenuDetail(url_id).then(res => {
 					this.Detail = res.data.message
 					// console.log(111, this.Detail)
@@ -229,7 +229,7 @@
 			},
 			user_collect() {
 				let loginUser = JSON.parse(uni.getStorageSync("LoginUser"));
-				let menu_id = getCurrentPages()[1].options._id
+				let menu_id = getCurrentPages()[getCurrentPages().length-1].options._id
 				let user_id = loginUser._id
 
 				this.params.user_id = user_id
@@ -243,7 +243,7 @@
 			},
 			get_collect() {
 				let user_id = JSON.parse(uni.getStorageSync("LoginUser"))._id
-				// console.log(222, user_id)
+				console.log(222, user_id)
 				common.getUserGetCollect({
 					_id: user_id
 				}).then(res => {

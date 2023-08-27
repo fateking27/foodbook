@@ -101,7 +101,7 @@ var components
 try {
   components = {
     uIcon: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-icon/u-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 281))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-icon/u-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 297))
     },
   }
 } catch (e) {
@@ -384,9 +384,9 @@ var _default = {
     },
     menuDetail: function menuDetail() {
       var _this = this;
-      var url_id = getCurrentPages()[1].options;
+      var url_id = getCurrentPages()[getCurrentPages().length - 1].options;
       // let url_id = urlString.split("=");
-      // console.log(url_id)
+      console.log(9999, url_id);
       _common.default.getMmenuDetail(url_id).then(function (res) {
         _this.Detail = res.data.message;
         // console.log(111, this.Detail)
@@ -394,7 +394,7 @@ var _default = {
     },
     user_collect: function user_collect() {
       var loginUser = JSON.parse(uni.getStorageSync("LoginUser"));
-      var menu_id = getCurrentPages()[1].options._id;
+      var menu_id = getCurrentPages()[getCurrentPages().length - 1].options._id;
       var user_id = loginUser._id;
       this.params.user_id = user_id;
       this.params.menu_id = menu_id;
@@ -407,7 +407,7 @@ var _default = {
     },
     get_collect: function get_collect() {
       var user_id = JSON.parse(uni.getStorageSync("LoginUser"))._id;
-      // console.log(222, user_id)
+      console.log(222, user_id);
       _common.default.getUserGetCollect({
         _id: user_id
       }).then(function (res) {

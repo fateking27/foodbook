@@ -6,7 +6,9 @@
     "pages/searchPage/searchPage",
     "pages/foodPage/foodPage",
     "pages/foodPage/foodPage_",
-    "pages/categories/categories"
+    "pages/categories/categories",
+    "pages/pay_success/pay_success",
+    "pages/buyVIP/buyVIP"
   ],
   "subPackages": [],
   "window": {

@@ -7,6 +7,8 @@ Vue.use(uView)
 import store from "@/store";
 
 
+
+
 // #ifndef VUE3
 import Vue from 'vue'
 import './uni.promisify.adaptor'

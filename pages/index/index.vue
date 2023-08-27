@@ -135,9 +135,9 @@
 			to_category(index) {
 				console.log((this.catitems[index]._id))
 				let url = this.catitems[index].navigator_url
-				let id = this.catitems[index]._id
+				let menu_name = this.catitems[index].name
 				uni.navigateTo({
-					url: url + "?" + "_id=" + id
+					url: url + "?" + "name=" + menu_name
 				})
 			}
 		}

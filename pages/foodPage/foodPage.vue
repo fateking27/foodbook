@@ -205,7 +205,6 @@
 				// let url_id = urlString.split("=");
 				// console.log(url_id)
 				common.getMmenuDetail(url_id).then(res => {
-					
 					this.Detail = res.data.message
 					console.log(111,this.Detail)
 				})

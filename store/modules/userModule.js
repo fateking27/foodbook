@@ -5,14 +5,20 @@ if (loginUser) {
 	let now = new Date().getTime();
 	let expriseTime = uni.getStorageSync("expriseTime");
 	if (now - Number(expriseTime) > 1000 * 60 * 30) {
-		loginUser = {
-			nickName: '未登录',
-			avatarUrl: ""
-		}
+		uni.removeStorage({
+			key: "LoginUser",
+			success: function() {
+				console.log("登录已失效")
+			}
+		})
+		// loginUser = {
+		// 	nickName: '未登录',
+		// 	avatarUrl: ""
+		// }
 	} else {
 		loginUser = JSON.parse(loginUser);
 	}
-	
+
 } else {
 	loginUser = {
 		nickName: '未登录',
@@ -24,9 +30,12 @@ if (loginUser) {
 export default {
 	namespaced: true,
 	//存储数据
-	state: {
-		loginUser: loginUser
-	},
+	state:() => ({
+		loginUser: loginUser,
+		token: uni.getStorageSync('token') || '',
+		// 用户的信息对象
+		userinfo: JSON.parse(uni.getStorageSync('loginUser') || '{}'),
+	}),
 	//获取数据
 	getters: {
 		getNickName(state) {
@@ -44,7 +53,7 @@ export default {
 			}
 		}
 	},
-	
+
 	//设置数据-同步方法
 	mutations: {
 		SET_LOGINUSER(state, obj) {
@@ -52,7 +61,7 @@ export default {
 			// uni.setStorageSync("LoginUser", JSON.stringify(obj))
 			uni.setStorageSync("expriseTime", new Date().getTime())
 			// state.loginUser = obj;
-		}
+		},
 	},
 	//设置数据-异步方法
 	actions: {
@@ -63,13 +72,14 @@ export default {
 				appId: "wx32975f2f83d837f2",
 				appSecret: "2211d7a6b078ee9dffca87f6d9efc09f"
 			})
-			
+
 			//保存登录用户和token到storage中
 			uni.setStorageSync("LoginUser", JSON.stringify({
 				token: authRes.data.token,
 				...authRes.data.userInfo
-			}))
-			
+			})),
+			uni.setStorageSync("token", JSON.stringify(authRes.data.token))
+
 			//4、更新用户信息接口
 			await ecom.auth({
 				token: authRes.data.token,
@@ -78,12 +88,12 @@ export default {
 				gender: wxuser.gender,
 				province: wxuser.province,
 			})
-			
+
 			//5、获取用户信息接口
 			let loginUserRes = await ecom.getUserInfo({
 				token: authRes.data.token
 			});
-			
+
 			context.commit("SET_LOGINUSER", {
 				token: authRes.data.token,
 				...loginUserRes[0]

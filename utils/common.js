@@ -12,6 +12,7 @@ export default {
 	getMmenuDetail: (params) => request.post("/search/menuDetail", params),
 	getUserCollect: (params) => request.post("/user/collect", params),
 	getUserGetCollect: (params) => request.get("/user/getcollect", params),
+	getsearchMenu: (params) => request.post("/search/searchMenu", params),
 	
 	wxLogin: (params) => request.post("/user/wxLogin", params),
 	getUserInfo: (params) => request.get("/user/getUserInfo", params),

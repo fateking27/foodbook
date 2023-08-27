@@ -1,8 +1,8 @@
 <template>
 	<view>
-		<view class="search_warp">
+		<!-- <view class="search_warp">
 			<u-search placeholder="日照香炉生紫烟" v-model="keyword" :showAction="false"></u-search>
-		</view>
+		</view> -->
 		<view class="container">
 			<view class="first_warp">
 				<scroll-view :scroll-y="true" class="scroll-Y">
@@ -17,7 +17,7 @@
 					<view class="second_item" v-for="(item, index) in categories" :key="item._id" :id="'s' + index">
 						<view style="margin-left: 10px;">{{item.cat_name}}</view>
 						<view class="second_list" style="text-align: center;">
-							<view style="margin-left:20rpx;padding: 0 20px;" v-for="item in item.children">
+							<view style="margin-left:20rpx;padding: 0 20px;" v-for="item in item.children" @click="goto_search(item)">
 								<image
 									style="width: 40px;height: 40px;display: block;border-radius: 50%;padding: 10px 0;"
 									:src="item.cat_icon" mode=""></image>
@@ -54,6 +54,9 @@
 					this.categories = res.data.message
 					console.log(this.categories)
 				})
+			},
+			goto_search(cat_name){
+				console.log(cat_name)
 			}
 		}
 	}
